@@ -45,6 +45,15 @@
 	],
 	"provisioners": [
 		{
+			"type": "file",
+			"source": "scripts/resizerootfs",
+			"destination": "/tmp"
+		},
+		{
+			"type": "shell",
+			"script": "scripts/bootstrap_resizerootfs.sh"
+		},
+		{
 			"type": "shell",
 			"inline": [
 				"touch /root/hello_world"
